@@ -1,16 +1,127 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<!--
+    To change the theme, change the class on the html tag below to one of:
+    - theme-auto: Automatically switches based on user's system preferences
+    - theme-light: Forces light theme
+    - theme-dark: Forces dark theme
+-->
+<html class="theme-auto" lang="en"> <!-- Update `class="theme-auto"` with your preference -->
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Meta Description - Write a description (150-160 characters recommended) -->
+        <meta name="description" content="Rendi Andriyanto's website, blog or portfolio.">
+        
+        <!-- Author Information -->
+        <meta name="author" content="Rendi Andriyanto">
+        
+        <!-- Browser UI Color - Matches the default light/dark theme backgrounds -->
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+        <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--
+            Social Sharing (Open Graph & Twitter) - Uncomment and fill in to control how your page
+            looks when shared on social platforms and in chat apps.
+            og:url and og:image must be full absolute URLs.
+        -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Rendi Andriyanto's site">
+        <meta property="og:description" content="My site—come check it out!">
+        <meta property="og:url" content="https://rendiand.com">
+        <meta property="og:image" content="https://rendiand.com/images/avatar@2x.png">
+        <meta name="twitter:card" content="summary">
 
-    <title>Rendi's Website</title>
-</head>
+        <!-- Page Title - Change this to your name/brand (50-60 characters recommended) -->
+        <title>Rendi's Website</title>
 
-<body>
-    <p>Hello World!</p>
-</body>
+        <link rel="icon" type="image/png" href="images/avatar.png"> <!-- Update this with your own favicon -->
+        
+        <!-- Canonical URL - Helps prevent duplicate content issues -->
+        <link rel="canonical" href="https://rendiand.com">
+
+        <!-- Font Preloads - Lets the browser fetch fonts in parallel with the stylesheets -->
+        <link rel="preload" href="fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-600.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="fonts/open-sans-v34-vietnamese_latin-ext_latin_hebrew_greek-ext_greek_cyrillic-ext_cyrillic-800.woff2" as="font" type="font/woff2" crossorigin>
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/brands.css">
+        <!-- LittleLink Extended Stylesheet (Optional) -->
+        <!--
+            Learn more at https://github.com/sethcottle/littlelink-extended.
+            Remove comments if you've added LittleLink Extended dependencies
+        -->
+        <link rel="stylesheet" href="css/brands-extended.css">
+        <link rel="stylesheet" href="css/sensitive-content.css">
+
+        <!-- JS -->
+        <script src="js/sensitive-content.js" defer></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="column">
+                <main>
+                    <!--
+                        By default, the Avatar is rounded. Use the following:
+                        - avatar--rounded: Automatically rounds the image
+                        - avatar--soft: Slightly rounds the image
+                        - avatar--none: Removes any rounding
+                        Be sure to replace the src with your own image path and update the alt text
+                    -->
+                    <img class="avatar avatar--rounded" src="images/avatar@2x.png" srcset="images/avatar@2x.png 2x, images/avatar@2x.png 3x" alt="Rendi Andriyanto" width="128" height="128" fetchpriority="high">
+
+                    <!-- Replace with your name or brand -->
+                    <h1>Rendi Andriyanto</h1>
+
+                    <!-- Add a short description about yourself or your brand -->
+                    <p>Rendi's website, blog or portfolio.</p>
+
+                    <!-- All your buttons go here -->
+                    <nav class="button-stack" aria-label="Links">
+                        <!-- Website -->
+                        <a class="button button-instagram" href="https://rendiand.com" rel="noopener"><img class="icon" aria-hidden="true" src="images/icons/rendi.svg" alt="Rendi's Logo">Website</a>
+
+                        <!-- GitHub -->
+                        <a class="button button-github" href="https://github.com/rendiandriyanto" target="_blank" rel="noopener"><img class="icon" aria-hidden="true" src="images/icons/github.svg" alt="GitHub Logo">GitHub</a>
+
+                        <!-- Roadmap.sh -->
+                        <a class="button button-notion" href="https://roadmap.sh/u/rendiandriyanto" target="_blank" rel="noopener"><img class="icon" aria-hidden="true" src="images/icons/roadmapsh.svg" alt="Roadmap.sh Logo">Roadmap.sh</a>
+
+                        <h2>Coming Soon Project ...</h2>
+                        
+                        <!-- Coming Soon Module -->
+                        <div class="slide-container" data-continue-url="https://github.com/rendiandriyanto/website">
+                            <!-- Trigger Button -->
+                            <a class="button button-roll20 sensitive-trigger" href="javascript:void(0)">
+                                <img class="icon" aria-hidden="true" src="images/icons/rendi.svg" alt="Rendi's Logo">
+                                Still in Imagination
+                            </a>
+
+                            <!-- The Slide-Down Panel -->
+                            <div class="sensitive-panel">
+                                <div class="sensitive-panel__content">
+                                    <p>I'm still thinking about what I want to do and hoping there will be a project that can benefit many people.</p>
+                                    <button class="button button-roll20 sensitive-continue">
+                                        Check it out!
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </main>
+                <!-- Feel free to add your own footer information, including updating `privacy.html` to reflect how your LittleLink fork is set up -->
+                <footer>
+                    ❤️ from <b>Jakarta</b> | BIG thanks to <a href="https://github.com/sethcottle/littlelink" target="_blank" rel="noopener">LittleLink</a>
+                </footer>
+            </div>
+        </div>
+    </body>
 
 </html>
